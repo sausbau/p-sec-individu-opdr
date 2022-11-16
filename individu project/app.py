@@ -15,7 +15,7 @@ recaptcha = ReCaptcha(app)
 @app.route("/", methods=['GET', 'POST'])
 def login():
     message = ''
-    
+
     with open('database.json', 'r') as f:
         db = json.load(f)
 
@@ -43,7 +43,7 @@ def login():
                         with open('database.json', 'w') as f:
                             json.dump(db, f)
 
-                        Fmessage = f'You only have {db["F_attemps"]} attempt(s).'
+                        Fmessage = f'You only have {db["F_attemps"]} attempt(s) left.'
 
                         return render_template('login.html', message=Fmessage)
                 else:
