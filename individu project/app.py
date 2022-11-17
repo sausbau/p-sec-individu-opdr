@@ -2,8 +2,7 @@ from flask import *
 from flask_recaptcha import *
 import json
 import os
-from datetime import datetime
-
+import ipmonitor
 app = Flask(__name__)
 
 
@@ -20,14 +19,13 @@ def login():
 
     if request.method == 'POST':
         ip = request.environ['REMOTE_ADDR']
-        with open ("ip.log", "a") as file:
-            file.write(f"{datetime.now()} - {ip}\n") #write the ip and time to ip.log file to monitor the amount of post requests (login attempts)
 
         if recaptcha.verify(): #here it wil check if the captcha is verified or not
                 username = request.form["usname"]
                 password = request.form["psw"]
 
                 if username == db["username"]: #if the username input is in the json file it executes the code here underneath
+                    ipmonitor.req(ip,username)# here it wil send the data to the ipmonitor.py file
                     if password == db["password"] and db['F_attemps'] > 0: #if the password is correct and the attempts is higher than 0 
                         db["F_attemps"] = 3 #here it resets the number back to 3 if the username and password are correct of the user
                         with open('database.json', 'w') as f: #here it writes the 3 to the json file
