@@ -11,6 +11,7 @@
 - [x] Make captcha
 - [x] Make a limit amount of login attempts system
 - [x] Make a log file for the login attempts and the information about the ip that attempted to login to a specific account/user
+## For the future
 - [ ] Block ip if it make too many login attempts between a certain interval
 
 ## Information
