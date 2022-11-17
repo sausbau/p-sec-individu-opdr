@@ -9,4 +9,4 @@ docker build -t <Name you want> .
 ```
 docker run -dit -p 5000:5000 <Name you choose>
 ```
-5. to see the website go to [a relative link](http://127.0.0.1:5000)
+5. to see the website go to [http://127.0.0.1:5000](http://127.0.0.1:5000) dont go to localhost:5000 because localhost is not in the list of supported domains.
