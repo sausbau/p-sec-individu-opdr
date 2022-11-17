@@ -1,5 +1,5 @@
 # p-sec-individu-opdr
-1 Make sure docker is running /n
+1 Make sure docker is running<br>
 2. go to <your dir>/p-sec-individu-opdr/individu project
 3. run to build the docker image
 ```
