@@ -4,10 +4,11 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <body>
 <div class="container">
-  <h1>Login</h1>
+  <br> <br>
+  <h1>Roeibootverhuur Genève</h1>
+  <h2>Login</h2>
   <form class="modal-content animate" method="post">
       <label for="uname"><b>Username</b></label><br>
       <input class="label" type="text" placeholder="Enter Username" name="usname" required>
@@ -15,11 +16,12 @@
       <br>
       <label for="psw"><b>Password</b></label><br>
       <input class="label" type="password" placeholder="Enter Password" name="psw" required>
-      <br>
+      <br> <br>
       <p>{{ message }}</p>
       <div class='captcha'> {{ recaptcha }}</div>
-      <br>
-      <button class="button"><span>submit </span></button>
+      <br><br>
+      <button class="button"><span>submit </span></button><br>
+      <img class="captcha" src="{{url_for('static', filename='image/57406.png')}}" />
     </div>
   </form>
 </body>
