@@ -1,7 +1,7 @@
 # p-sec-individu-opdr
 1 Make sure docker is running<br>
-2. go to <your dir>/p-sec-individu-opdr/individu project
-3. run to build the docker image
+2. go to <your dir>/p-sec-individu-opdr/individu project<br>
+3. run to build the docker image<br>
 ```
 docker build -t <Name you want> .
 ```
