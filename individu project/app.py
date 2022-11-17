@@ -54,7 +54,10 @@ def login():
 
 @app.route("/succes")
 def succes():
-    return render_template('succes.html')
+    with open('database.json', 'r') as f: #here it wil open the json file with the database entries
+        db = json.load(f)
+    Fmessage = f'You are back to {db["F_attemps"]} attempts.' #here it wil print the amount of attempts you have left
+    return render_template('succes.html',message=Fmessage)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
