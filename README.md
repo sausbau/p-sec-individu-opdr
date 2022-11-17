@@ -12,7 +12,7 @@
 - [x] Make a limit amount of login attempts system
 - [x] Make a log file for the login attempts and the information about the ip that attempted to login to a specific account/user
 ## For the future
-- [ ] Block ip if it make too many login attempts between a certain interval
+- [ ] Block ip if it makes too many login attempts between a certain interval
 
 ## Information
  This website is meant to limit automated brute force attacks by using the recaptcha of google, the limited amount of login attempts and monitor the login attempts to maybe take action in the future or block the ip directly if some ip makes too many login attempts
